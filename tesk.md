@@ -3,10 +3,10 @@ _____________
 achievements
 . . . . . . . 
 
-image(optional)
-start date
-end date
-description
+image(optional),
+start date,
+end date,
+description,
 [submit button]
 
 <!-- 
@@ -26,12 +26,12 @@ description
 [submit button]
 
 <!-- new format -->
-institutionName
-position
-startDate -Required
-endDate - Not required
-description 
-location -not required
+institutionName,
+position,
+startDate -Required,
+endDate - Not required,
+description, 
+location -not required,
 createdAt
 
 _____________
