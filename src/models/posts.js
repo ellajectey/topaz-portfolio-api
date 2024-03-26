@@ -10,7 +10,8 @@ const PostSchema =new schema ({
     description: {type: String,required: true},
     date: {type: Date,required: true},
     isPublished: {type: Boolean, default: false},
-    url: {type: String, default: null}
+    url: {type: String, default: null},
+    createdAt: {type: Date, default: Date.now}
 
 })
 export const postModel = mongoose.model("Post", PostSchema)

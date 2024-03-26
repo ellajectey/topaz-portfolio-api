@@ -22,8 +22,8 @@ app.listen(8000, () => {
     app,
     (spec) => {
       spec.info = {
-        title: "Portfolio API Documentation",
-        description: "API Documentation for Portfolio website",
+        title: "Topaz Portfolio API Documentation",
+        description: "API Documentation for Topaz Portfolio website",
       };
       spec.host = "localhost:4000";
       spec.schemes = ["http", "https"];

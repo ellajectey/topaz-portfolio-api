@@ -8,7 +8,8 @@ const AchievementSchema =new schema ({
     image: {type: String,default: null},
     startDate: {type: Date,required: true},
     endDate: {type: Date,default: null},
-    description: {type: String,required: true}
+    description: {type: String,required: true},
+    createdAt: {type: Date, default: Date.now}
 
 
 });
