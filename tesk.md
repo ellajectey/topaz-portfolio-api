@@ -2,19 +2,37 @@ fields needed
 _____________
 achievements
 . . . . . . . 
+
 image(optional)
 start date
 end date
 description
 [submit button]
 
+<!-- 
+new format -->
+achievements model
+
+title, description,date,certificate,image,createdAt
+
+
+
 _____________
 experience
 . . . . . . . 
-start date
+start date 
 end date
 description
 [submit button]
+
+<!-- new format -->
+institutionName
+position
+startDate -Required
+endDate - Not required
+description 
+location -not required
+createdAt
 
 _____________
 skills
@@ -30,4 +48,8 @@ posts
 . . . . . . . 
 image
 title
-description
+description (put a lot of text here and truncate it)
+Date
+isPublished (true or false)
+url(not required)
+createdAt

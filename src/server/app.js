@@ -6,20 +6,22 @@ import {router} from '../routes/allroutes.js'
 
 dotenv.config();
 
-const app =express();
+const app = express();
 
 app.use(express.json());
-app.use(router);
+
 
 const mongoUri = process.env.MONGO_URI;
 
 try {
     await mongoose.connect(mongoUri)
+    console.log("database is connected")
 } catch (error) {
     
-    console.log("database is connected")
+    console.log(error)
 }
 
+app.use(router);
 
 const port = process.env.PORT || 8080
 

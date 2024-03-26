@@ -1,43 +1,50 @@
-import {handleRequests, init, handleResponses} from 'express';
-
 import express from "express";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
-import {router} from '../routes/allroutes.js'
-import mongoose from 'mongoose';
-
+import cors from "cors";
+import { handleRequests, init, handleResponses } from "express-oas-generator";
+import { router } from "./routes/allroutes.js";
+//const expressOasGenerator = require('express-oas-generator');
 
 dotenv.config();
 
-const port = process.env.PORT || 8080
-const modelNames=mongoose.modelNames();
+const modelNames = mongoose.modelNames();
 
-const app =express();
-handleResponses(app, {});
+const app = express();
+handleResponses(app);
 
 app.use(express.json());
+app.use(cors());
 
-
-init(
+handleResponses(app);
+app.listen(8000, () => {
+  init(
     app,
-    function(spec) { return spec; },
-    '/swagger.json',
+    (spec) => {
+      spec.info = {
+        title: "Portfolio API Documentation",
+        description: "API Documentation for Portfolio website",
+      };
+      spec.host = "localhost:4000";
+      spec.schemes = ["http", "https"];
+
+      console.log('lll', spec)
+      return spec;
+    },
+    "./swagger.json",
     60 * 1000,
-    'api-docs',
+    "api-docs",
     modelNames,
-    ['users', 'skills'],
-    ['production'],
-    true,
- 
-  )
+    ["users"],
+    ["production"],
+    true
+  );
 
-
-
-app.use(router);
-handleRequests();
-
-app.listen(port, () =>{
-
-    console.log(`Express server is running on ${port}`);
- 
+  console.log(
+    'Server Listening on  8000, Open http://localhost:8000/api-docs/'
+  );
 });
 
+app.use(router);
+
+handleRequests();
