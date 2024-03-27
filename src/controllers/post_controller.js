@@ -18,7 +18,7 @@ catch (error) {
 
 }
 
-export const getPost = async (req,res) => {
+export const getPosts = async (req,res) => {
     try {
         
         const getAllPosts = await postModel.find({})

@@ -53,3 +53,13 @@ Date
 isPublished (true or false)
 url(not required)
 createdAt
+
+{
+  "image": "",
+    "title": "Frontend",
+    "description": "a day in my life as a frontenddev",
+    "date": "04/02/2024",
+   "isPublished": "",
+    "url": "https://topaz-movie.vercel.app/",
+    "createdAt": ""
+}

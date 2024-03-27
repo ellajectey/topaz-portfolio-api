@@ -4,7 +4,7 @@ import { addAchievement } from "../controllers/achievement_controller.js";
 import { addExperience } from "../controllers/experience_controller.js";
 import { addPost } from "../controllers/post_controller.js";
 import { getAchievement } from "../controllers/achievement_controller.js";
-import { getPost } from "../controllers/post_controller.js";
+import { getPosts } from "../controllers/post_controller.js";
 import { getExperience } from "../controllers/experience_controller.js";
 import { deleteOneAchievement } from "../controllers/achievement_controller.js";
 import { deleteOnePost } from "../controllers/post_controller.js";
@@ -27,7 +27,7 @@ router.patch("/edit-experience",editOneExperience)
 
 
 router.post("/add-post",addPost)
-router.get("/get-post",getPost)
+router.get("/get-post",getPosts)
 router.delete("/delete-post",deleteOnePost)
 router.patch("/edit-post",editOnePost)
 
