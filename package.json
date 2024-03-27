@@ -9,7 +9,6 @@
     "openapi": "nodemon src/openapi.js",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
-   
   },
   "keywords": [],
   "author": "",
@@ -20,7 +19,7 @@
     "express": "^4.19.1",
     "express-oas-generator": "^1.0.46",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.2.2",
+    "mongoose": "^6.4.6",
     "mongoose-to-swagger": "^1.5.1",
     "nodemon": "^3.1.0"
   }
