@@ -2,13 +2,13 @@
   "name": "portfolio-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server/app.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "openapi": "nodemon src/openapi.js",
-    "start": "node src/server/app.js",
-    "dev": "nodemon src/server/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
    
   },
   "keywords": [],
