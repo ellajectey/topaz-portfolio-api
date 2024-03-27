@@ -22,7 +22,7 @@ export const getPosts = async (req,res) => {
     try {
         
         const getAllPosts = await postModel.find({})
-        res.send(getAllPosts)
+        res.json(getAllPosts)
 
         console.log(data)
         res.send("all posts")
