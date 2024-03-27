@@ -5,10 +5,10 @@ const schema = mongoose.Schema
 
 const PostSchema =new schema ({
 
-    image: {type: String,required: true},
+    image: {type: String,default: null},
     title: {type: String,required: true},
     description: {type: String,required: true},
-    date: {type: Date,required: true},
+    date: {type: Date,default: null},
     isPublished: {type: Boolean, default: false},
     url: {type: String, default: null},
     createdAt: {type: Date, default: Date.now}
