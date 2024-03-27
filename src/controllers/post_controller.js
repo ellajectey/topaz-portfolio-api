@@ -22,6 +22,7 @@ export const getPosts = async (req,res) => {
     try {
         
         const getAllPosts = await postModel.find({})
+        console.log('gttrg',getAllPosts)
         res.json(getAllPosts)
 
         // console.log(data)

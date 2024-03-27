@@ -10,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use(router);
 
 const mongoUri = process.env.MONGO_URI;
 
@@ -21,7 +22,7 @@ try {
     console.log(error)
 }
 
-app.use(router);
+
 
 const port = process.env.PORT || 8080
 
