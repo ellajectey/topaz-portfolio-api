@@ -27,7 +27,7 @@ router.patch("/edit-experience",editOneExperience)
 
 
 router.post("/add-post",addPost)
-router.get("/get-post",getPosts)
+router.get("/getpost",getPosts)
 router.delete("/delete-post",deleteOnePost)
 router.patch("/edit-post",editOnePost)
 
