@@ -1,6 +1,11 @@
 import express from "express";
 import { achievementModel } from "../models/achievements.js";
 
+const app = express();
+
+// Parse application/json
+app.use(express.json());
+
 export const addAchievement = async (req,res) =>{
 try {
     const data = req.body
