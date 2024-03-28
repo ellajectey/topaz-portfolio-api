@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import {router} from './routes/allroutes.js'
 import { handleRequests, init, handleResponses } from "express-oas-generator";
-var bodyParser = require('body-parser');
+import bodyParser from "body-parser";
 
 dotenv.config();
 
