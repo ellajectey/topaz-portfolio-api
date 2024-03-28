@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import {router} from './routes/allroutes.js'
 import { handleRequests, init, handleResponses } from "express-oas-generator";
-
+var bodyParser = require('body-parser');
 
 dotenv.config();
 
@@ -16,6 +16,12 @@ handleResponses(app);
 app.use(express.json());
 
 app.use(router);
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use(bodyParser.json());
 
 const mongoUri = process.env.MONGO_URI;
 
