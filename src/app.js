@@ -57,9 +57,8 @@ app.listen(port, () =>{
         60 * 1000,
         "api-docs",
         modelNames,
-        ["posts"],
-        ["achievements"],
-        ["experiences"],
+        ["users"],
+        ["develop"],
 
         true
       );

@@ -36,7 +36,7 @@ app.listen(8000, () => {
     "api-docs",
     modelNames,
     ["users"],
-    ["production"],
+    ["develop"],
     true
   );
 
