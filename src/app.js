@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import {router} from './routes/allroutes.js'
 import { handleRequests, init, handleResponses } from "express-oas-generator";
-import cors from "cors";
+// import cors from "cors";
 
 dotenv.config();
 
@@ -17,13 +17,13 @@ app.use(express.json());
 
 app.use(router);
 
-app.use(cors());
+// app.use(cors());
 
-app.use(cors({
-  origin: '*', // Allow requests from any origin
-  methods: '*', // Allow all HTTP methods
-  allowedHeaders: '*' // Allow all headers
-}));
+// app.use(cors({
+//   origin: '*', // Change this to your allowed origins if needed
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Include the HTTP methods your API supports
+//   allowedHeaders: ['Content-Type'] // Allow Content-Type header
+// }));
 
 const mongoUri = process.env.MONGO_URI;
 
